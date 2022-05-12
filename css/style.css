@@ -1,0 +1,359 @@
+body {
+  color: #333;
+  font-size: 0.875rem;
+  min-height: 100vh;
+  position: relative;
+}
+
+a {
+  color: #333;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  background-color: transparent;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.wrapper {
+  max-width: 1360px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+#overflow {
+  overflow: hidden;
+}
+
+#overflow .open .menu-btn span {
+  background-color: #fff;
+}
+
+#overflow .open .menu-btn span:nth-child(1) {
+  -webkit-transform: translateY(4px) rotate(-45deg);
+          transform: translateY(4px) rotate(-45deg);
+}
+
+#overflow .open .menu-btn span:nth-child(2) {
+  -webkit-transform: translateY(-4px) rotate(45deg);
+          transform: translateY(-4px) rotate(45deg);
+}
+
+#overflow .open #nav {
+  left: 0;
+  opacity: 1;
+}
+
+#overflow .open #mask {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.8;
+  z-index: 10;
+  cursor: pointer;
+}
+
+#overflow header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  height: 80px;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 10;
+}
+
+#overflow header .site-title a {
+  display: block;
+  width: 180px;
+}
+
+#overflow header .site-title a img {
+  width: 100%;
+}
+
+#overflow header .menu-btn {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+  z-index: 20;
+}
+
+#overflow header .menu-btn span {
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: #333;
+  border-radius: 4px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#overflow header .menu-btn span:nth-child(1) {
+  top: 10px;
+}
+
+#overflow header .menu-btn span:nth-child(2) {
+  bottom: 10px;
+}
+
+#overflow header #nav {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  color: #fff;
+  padding: 36px 50px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  z-index: 20;
+  opacity: 0;
+}
+
+#overflow header #nav li {
+  margin-bottom: 14px;
+}
+
+#overflow header #nav li a {
+  color: #fff;
+}
+
+#overflow header #mask {
+  display: none;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#overflow #main {
+  margin-top: 80px;
+  margin-bottom: 126px;
+}
+
+#overflow #main #top .item-lists {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (25%)[4];
+      grid-template-columns: repeat(4, 25%);
+}
+
+@media screen and (max-width: 900px) {
+  #overflow #main #top .item-lists {
+    -ms-grid-columns: (50%)[2];
+        grid-template-columns: repeat(2, 50%);
+  }
+}
+
+#overflow #main #top .item-lists .item-container {
+  padding: 0 4%;
+  margin-bottom: 40px;
+}
+
+#overflow #main #top .item-lists .item-container a img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 10px;
+}
+
+#overflow #main #top .item-lists .item-container a p {
+  font-size: 12px;
+  color: #333;
+}
+
+#overflow #main #top .link-text {
+  display: block;
+  text-align: center;
+}
+
+#overflow #main #top .page-title {
+  font-size: 14px;
+  margin-top: 120px;
+  margin-bottom: 30px;
+}
+
+#overflow #main #top .products-pages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#overflow #main #top .products-pages li {
+  margin: 0 20px;
+}
+
+#overflow #main #top #about {
+  max-width: 600px;
+}
+
+#overflow #main #top #about .text {
+  font-size: 14px;
+  line-height: 2em;
+  margin-bottom: 30px;
+}
+
+#overflow #main #top #company {
+  max-width: 600px;
+}
+
+#overflow #main #top #company .information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 40px;
+}
+
+#overflow #main #top #company .information dt {
+  font-size: 14px;
+  font-weight: normal;
+  border-bottom: solid 1px #DCDBDB;
+  width: 30%;
+  padding: 20px 10px;
+}
+
+#overflow #main #top #company .information dd {
+  font-size: 14px;
+  border-bottom: solid 1px #DCDBDB;
+  width: 70%;
+  padding: 20px 10px;
+}
+
+#overflow #main #top #company .information dt:last-of-type, #overflow #main #top #company .information dd:last-of-type {
+  border-bottom: none;
+}
+
+#overflow #main #top #company .map {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+#overflow #main #top #company .map iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+}
+
+#overflow #main #top #item {
+  max-width: 800px;
+}
+
+#overflow #main #top #item .item-detail {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  margin-bottom: 60px;
+}
+
+#overflow #main #top #item .item-detail .item-image {
+  width: 100%;
+}
+
+#overflow #main #top #item .item-detail .item-image img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#overflow #main #top #item .item-detail .description {
+  padding-left: 16%;
+}
+
+#overflow #main #top #item .item-detail .description .text {
+  font-size: 14px;
+  line-height: 1.5em;
+  margin-bottom: 30px;
+}
+
+#overflow #main #top #item .item-detail .description .price {
+  font-size: 12px;
+  margin-bottom: 30px;
+}
+
+#overflow #main #top #item .item-detail .description .specification {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#overflow #main #top #item .item-detail .description .specification dt {
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1.5em;
+  width: 30%;
+}
+
+#overflow #main #top #item .item-detail .description .specification dd {
+  font-size: 12px;
+  line-height: 1.5em;
+  width: 70%;
+}
+
+#overflow #footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+}
+
+@media screen and (max-width: 900px) {
+  #overflow #footer {
+    display: block;
+  }
+}
+
+#overflow #footer .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 900px) {
+  #overflow #footer .menu {
+    margin-bottom: 10px;
+  }
+}
+
+#overflow #footer .menu li {
+  font-size: 12px;
+  margin-right: 30px;
+}
+
+#overflow #footer .copyright {
+  font-size: 10px;
+}
+/*# sourceMappingURL=style.css.map */
